@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practical guide to slab leak detection, emergency leak repair, and water line services in Plano, Texas.">
+  <meta name="theme-color" content="#10243a">
+  <title>Plano Leak Repair Guide | Slab Leak & Water Leak Resources</title>
+  <style>
+    :root {
+      --navy: #10243a;
+      --navy-2: #183b5b;
+      --blue: #2776c5;
+      --aqua: #dff4f7;
+      --ink: #172536;
+      --muted: #637286;
+      --paper: #f5f8fc;
+      --white: #ffffff;
+      --line: #e2e9f1;
+      --shadow: 0 18px 50px rgba(16, 36, 58, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { background: var(--navy); color: #dbe7f4; font-size: .88rem; }
+    .topbar-inner { min-height: 42px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .topbar a { color: #fff; text-decoration: none; font-weight: 650; }
+    header { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 78px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: -.03em; color: var(--navy); }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: linear-gradient(135deg, var(--blue), #38b8c8); color: white; font-size: 1.15rem; box-shadow: 0 8px 18px rgba(39,118,197,.22); }
+    .nav-note { color: var(--muted); font-size: .9rem; }
+    .hero { padding: 78px 0 66px; background: radial-gradient(circle at 85% 15%, rgba(56,184,200,.17), transparent 27%), linear-gradient(135deg, #edf5fc, #f8fbff 60%, #e8f5f7); border-bottom: 1px solid var(--line); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border: 1px solid #cfe3f4; border-radius: 999px; background: rgba(255,255,255,.75); color: var(--navy-2); font-size: .82rem; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
+    .eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: #2eaf9a; }
+    h1 { max-width: 850px; margin: 22px 0 18px; color: var(--navy); font-size: clamp(2.35rem, 5.4vw, 4.25rem); line-height: 1.08; letter-spacing: -.055em; }
+    .hero p { max-width: 740px; margin: 0; color: #52647a; font-size: clamp(1.02rem, 1.8vw, 1.18rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 12px 18px; border-radius: 11px; text-decoration: none; font-weight: 750; transition: transform .18s ease, box-shadow .18s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--blue); color: white; box-shadow: 0 9px 20px rgba(39,118,197,.2); }
+    .btn-secondary { background: white; border: 1px solid var(--line); color: var(--navy); }
+    main { padding: 64px 0 76px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
+    .section-head h2 { margin: 0; color: var(--navy); font-size: clamp(1.75rem, 3.5vw, 2.45rem); letter-spacing: -.04em; line-height: 1.15; }
+    .section-head p { max-width: 490px; margin: 0; color: var(--muted); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .service-card { display: flex; flex-direction: column; min-height: 255px; padding: 25px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: 0 5px 20px rgba(16,36,58,.035); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .service-card:hover { transform: translateY(-4px); border-color: #c4d9ed; box-shadow: var(--shadow); }
+    .icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; background: var(--aqua); color: var(--navy-2); font-size: 1.4rem; }
+    .service-card h3 { margin: 19px 0 8px; color: var(--navy); font-size: 1.18rem; line-height: 1.35; letter-spacing: -.02em; }
+    .service-card p { margin: 0 0 20px; color: var(--muted); font-size: .96rem; }
+    .card-link { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--blue); text-decoration: none; font-weight: 800; }
+    .card-link:hover { text-decoration: underline; }
+    .guide { margin-top: 56px; padding: clamp(25px, 4vw, 42px); border-radius: 22px; background: var(--navy); color: #dbe7f4; display: grid; grid-template-columns: 1.1fr .9fr; gap: 35px; align-items: center; overflow: hidden; position: relative; }
+    .guide:after { content: ""; position: absolute; width: 300px; height: 300px; right: -100px; top: -130px; border-radius: 50%; border: 1px solid rgba(255,255,255,.13); box-shadow: 0 0 0 32px rgba(255,255,255,.025), 0 0 0 64px rgba(255,255,255,.025); pointer-events: none; }
+    .guide h2 { margin: 0 0 12px; color: white; font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.2; letter-spacing: -.04em; }
+    .guide p { margin: 0; color: #c1d0df; }
+    .guide-list { display: grid; gap: 12px; position: relative; z-index: 1; }
+    .guide-item { display: flex; gap: 11px; align-items: flex-start; padding: 13px 15px; border: 1px solid rgba(255,255,255,.13); border-radius: 12px; background: rgba(255,255,255,.055); }
+    .check { color: #66dfc7; font-weight: 900; }
+    .note { margin-top: 22px; color: var(--muted); font-size: .88rem; }
+    footer { background: #0b1928; color: #b6c4d3; padding: 28px 0; font-size: .9rem; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    footer a { color: white; text-decoration: none; }
+    @media (max-width: 850px) {
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .guide { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .topbar-inner { justify-content: center; text-align: center; padding: 9px 0; }
+      .topbar-inner span { display: none; }
+      .nav { min-height: 68px; }
+      .nav-note { display: none; }
+      .hero { padding: 58px 0 50px; }
+      main { padding: 46px 0 54px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 0; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span>Helpful plumbing and leak-repair resources for Plano, Texas</span>
+      <a href="https://slableakrepairplanotx.com/">Visit Slab Leak Repair Plano TX ↗</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Plano Leak Repair Guide home">
+        <span class="brand-mark" aria-hidden="true">⌁</span>
+        <span>Plano Leak Repair Guide</span>
+      </a>
+      <span class="nav-note">Detection · Repair · Water Lines</span>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="eyebrow"><span></span> Plano, Texas resource hub</div>
+      <h1>Leak Repair Resources for Plano Homeowners</h1>
+      <p>Water leaks can be difficult to locate and may cause damage when left unaddressed. Explore these resources to understand common leak detection and repair services, including slab leaks, urgent plumbing issues, and underground water line problems in Plano, TX.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#services">Explore Services <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-secondary" href="https://slableakrepairplanotx.com/">Visit Main Website <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <section id="services" aria-labelledby="services-title">
+        <div class="section-head">
+          <h2 id="services-title">Explore Leak Detection &amp; Repair Topics</h2>
+          <p>Choose a topic below to learn more about the service and find the related information on our main website.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">⌂</div>
+            <h3>Slab Leak Repair Plano TX</h3>
+            <p>Learn about slab leak repair options and common signs of a leak beneath a home's concrete foundation.</p>
+            <a class="card-link" href="https://slableakrepairplanotx.com/">Explore slab leak repair <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">⌕</div>
+            <h3>Emergency Leak Detection Plano TX</h3>
+            <p>Understand how urgent leak detection can help locate a suspected plumbing leak and guide the next steps.</p>
+            <a class="card-link" href="https://slableakrepairplanotx.com/emergency-leak-detection-plano-tx/">Explore emergency detection <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">◉</div>
+            <h3>Emergency Leak Repair Plano TX</h3>
+            <p>Review emergency leak repair information for unexpected plumbing leaks that need prompt attention.</p>
+            <a class="card-link" href="https://slableakrepairplanotx.com/emergency-leak-repair-plano-tx/">Explore emergency repair <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">⌁</div>
+            <h3>Emergency Slab Leak Repair Plano TX</h3>
+            <p>Find information about urgent slab leak concerns, potential warning signs, and repair considerations.</p>
+            <a class="card-link" href="https://slableakrepairplanotx.com/emergency-slab-leak-repair-plano-tx/">Explore emergency slab repair <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">◎</div>
+            <h3>Slab Leak Detection Plano TX</h3>
+            <p>Learn about possible slab leak symptoms and methods used to narrow down a hidden leak location.</p>
+            <a class="card-link" href="https://slableakrepairplanotx.com/slab-leak-detection-plano-tx/">Explore slab leak detection <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">⌁</div>
+            <h3>Underground Water Line Repair Plano TX</h3>
+            <p>Explore common underground water line problems, warning signs, and repair planning considerations.</p>
+            <a class="card-link" href="https://slableakrepairplanotx.com/underground-water-line-repair-plano-tx/">Explore water line repair <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card">
+            <div class="icon" aria-hidden="true">⌕</div>
+            <h3>Water Leak Detection Plano TX</h3>
+            <p>Review common clues to hidden water leaks and why identifying the source matters before repairs begin.</p>
+            <a class="card-link" href="https://slableakrepairplanotx.com/water-leak-detection-plano-tx/">Explore water leak detection <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="guide" aria-labelledby="guide-title">
+        <div>
+          <h2 id="guide-title">Not sure where a leak is coming from?</h2>
+          <p>Unexplained water use, damp flooring, warm spots on the floor, or a sudden drop in water pressure can have several causes. If you suspect an active leak, consider shutting off water when safe to do so and getting qualified help to assess the problem.</p>
+        </div>
+        <div class="guide-list">
+          <div class="guide-item"><span class="check" aria-hidden="true">✓</span><span>Notice and document visible signs of moisture or water damage.</span></div>
+          <div class="guide-item"><span class="check" aria-hidden="true">✓</span><span>Use the service links above to explore relevant detection and repair topics.</span></div>
+          <div class="guide-item"><span class="check" aria-hidden="true">✓</span><span>Visit the main website for additional information about services in Plano.</span></div>
+        </div>
+      </section>
+
+      <p class="note">This page is an informational resource. Service availability, response times, pricing, licensing, and repair methods should be confirmed directly with the provider.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Plano Leak Repair Guide</span>
+      <a href="https://slableakrepairplanotx.com/">Slab Leak Repair Plano TX ↗</a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
